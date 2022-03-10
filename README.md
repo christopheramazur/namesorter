@@ -1,7 +1,7 @@
 # NameSorter
-java name sorter
+A name sorting program in java. Accepts a path to a text file that contains comma-delineated lastname, firstname lines of text, and produces a similar text file in the PWD that has been sorted by last name, then first name. 
 
-# Use
+## Use
 Clone the repository with <code>git clone https://github.com/christopheramazur/namesorter.git</code> from a terminal.
 
 Navigate to the directory and run <code>java -jar NameSorter.jar</code> from a terminal.
@@ -20,7 +20,7 @@ The console will display any errors that you have encountered, as well as the co
 
 The program will exit. 
 
-# Testing
+## Testing
 My apologies, I haven't used Java's testing before and between Maven and JUnit was not able to get tests running in time.
 
 Ideal tests for this program would be:
@@ -28,8 +28,9 @@ Ideal tests for this program would be:
 - Validating data format is handled or excepted
 - Validating null data and empty lists are handled or excepted
 - Validating program exits on completion or exception
+- Validating behaviour with duplicate entries
 
-# Future work
+## Future work
 - Decoupling fullname creation from sorting
 - Looping main flow and expanding intake to accept multiple files
 - Accepting and parsing args for e.g. filters, aggregations, export formats
