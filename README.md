@@ -6,10 +6,10 @@ Clone the repository and run java -jar NameSorter.jar
 
 A prompt should appear in your console, or a console should be provided if the .jar was run through another method.
 
-Provide the console an absolute or relative path to a file (e.g. <filename>.<extension>, ./<filename>.<extension>, ~/docs/<filename>.<extension>).
+Provide the console an absolute or relative path to a file (e.g. "filename.extension", "./filename.extension", "~/docs/filename.extension", etc.).
 - The file must consist of names in the format "Last Name, First Name\n"
 
-The console will print the names alphabetically to the console, as well as to a file named <filename>-sorted.<extension> in the present directory.
+The console will print the names alphabetically to the console, as well as to a file named "filename-sorted.extension" in the present directory.
 
 The console will display any errors that you have encountered, as well as the completion status.
 
