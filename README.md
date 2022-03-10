@@ -21,10 +21,10 @@ My apologies, I haven't used Java's testing before and between Maven and JUnit w
 Ideal tests for this program would be:
 - Validating filename input is handled or excepted
 - Validating data format is handled or excepted
-- Validating null data in lists is handled or excepted
+- Validating null data and empty lists are handled or excepted
 - Validating program exits on completion or exception
 
-# Extension, future work
+# Future work
 - Decoupling fullname creation from sorting
 - Looping main flow and expanding intake to accept multiple files
 - Accepting and parsing args for e.g. filters, aggregations, export formats
