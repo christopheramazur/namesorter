@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.megaport.NameSorter</groupId>
+  <groupId>NameSorter</groupId>
   <artifactId>NameSorter</artifactId>
   <version>1.0-SNAPSHOT</version>
 
@@ -21,7 +21,7 @@
             <manifest>
               <addClasspath>true</addClasspath>
               <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>com.megaport.NameSorter.NameSorter</mainClass>
+              <mainClass>NameSorter.NameSorter</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -30,7 +30,8 @@
   </build>
 
   <dependencies>
-    <dependency>
+    <!-- Testing Dependency -->
+    <dependency> 
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13.2</version>

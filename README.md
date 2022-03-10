@@ -2,25 +2,29 @@
 java name sorter
 
 # Use
-Clone the repository 
+Clone the repository and run java -jar NameSorter.jar
 
-Run the program and provide the console an absolute or relative path to a file (e.g. <filename>.<extension>, ./<filename>.<extension>, ~/docs/<filename>.<extension>).
+A prompt should appear in your console, or a console should be provided if the .jar was run through another method.
 
-The file must consist of names in the format "Last Name, First Name\n"
+Provide the console an absolute or relative path to a file (e.g. <filename>.<extension>, ./<filename>.<extension>, ~/docs/<filename>.<extension>).
+- The file must consist of names in the format "Last Name, First Name\n"
 
 The console will print the names alphabetically to the console, as well as to a file named <filename>-sorted.<extension> in the present directory.
 
-# Structure
-The launcher will generate a UI handler that contains a console. 
+The console will display any errors that you have encountered, as well as the completion status.
 
-Text is taken in through this console and displayed back out through it as well.
+The program will exit. 
 
-Once a valid filename is received, it is passed to a file handler which opens the file and reads text from it into an arraylist.
+# Testing
+My apologies, I haven't used Java's testing before and between Maven and JUnit was not able to get tests running in time.
 
-The arraylist is accessed by the launcher and sent to the name sorter, where it is sorted. 
+Ideal tests for this program would be:
+- Validating filename input is handled or excepted
+- Validating data format is handled or excepted
+- Validating null data in lists is handled or excepted
+- Validating program exits on completion or exception
 
-The sorted list is taken by the launcher and passed to the file handler to be written. The launcher will also pass the sorted list to the ui handler for display.
-
-Finally, the launcher will take the output path for the file and pass it to the ui handler for completion display.
-
-Logging and errors are handled in the launcher primarily beacuse that's how I've done it in Go so far -- happy to learn new paradigms.
+# Extension, future work
+- Decoupling fullname creation from sorting
+- Looping main flow and expanding intake to accept multiple files
+- Accepting and parsing args for e.g. filters, aggregations, export formats

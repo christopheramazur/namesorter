@@ -1,9 +1,11 @@
-package com.megaport.NameSorter.sorting;
+package NameSorter.sorting;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+// FullName object used to handle sorting
+// could instead import data science libraries and treat like csv
 class FullName {
     private String fullName, firstName, lastName;
     
@@ -51,12 +53,12 @@ public class SortNames {
     }
 
     public List<String> GetSortedNames() {
-        SortNames();
+        SortNameList();
         return this.sortedNames;
     }
 
     // sort by comparing lastnames first, then firstnames if there's a match on lastnames. 
-    private void SortNames() {
+    private void SortNameList() {
         this.fullNames.sort(new Comparator<FullName>() {
             public int compare(FullName fullName1, FullName fullName2) {
                 int result = fullName1.getLastName().compareToIgnoreCase(fullName2.getLastName());

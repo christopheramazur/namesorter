@@ -1,8 +1,8 @@
-package com.megaport.NameSorter;
+package NameSorter;
 import java.util.List;
 
-import com.megaport.NameSorter.sorting.*;
-import com.megaport.NameSorter.iowrapper.*;
+import NameSorter.iowrapper.*;
+import NameSorter.sorting.*;
 
 public class NameSorter {
 
@@ -32,13 +32,13 @@ public class NameSorter {
         // Read Line from Name File
         // we could also do fileHandler.ReadFileToNamesList(nameList);
         fileHandler.ReadFileToNamesList();
-        if (fileHandler.FNFError != null) {
-            fileHandler.FNFError.printStackTrace();
+        if (fileHandler.FNFException != null) {
+            fileHandler.FNFException.printStackTrace();
             uiHandler.WriteOutput("Please enter the name of a file. Ensure the path to the file is correct. The file path can be relative to your PWD, or absolute.");
             System.exit(1);
         }
-        if (fileHandler.IOError != null) {
-            fileHandler.IOError.printStackTrace();
+        if (fileHandler.IOException != null) {
+            fileHandler.IOException.printStackTrace();
             uiHandler.WriteOutput("Please select a file that isn't empty.");
             System.exit(1);
         }
@@ -60,8 +60,8 @@ public class NameSorter {
 
         // write results to file
         fileHandler.WriteNamesListToFile(sortedNames);
-        if (fileHandler.IOError != null) {
-            fileHandler.IOError.printStackTrace();
+        if (fileHandler.IOException != null) {
+            fileHandler.IOException.printStackTrace();
             uiHandler.WriteOutput("File could not be created.");
             System.exit(1);
         }

@@ -1,12 +1,10 @@
-package com.megaport.NameSorter.iowrapper;
+package NameSorter.iowrapper;
 
 import java.io.Console;
 
 public class UIHandler {
-    // Create a Console for CLI input
     // console used for extensibility e.g. queuing multiple files, parsing input flags
     private Console console;
-
     private String input, output;
 
     public String getUserInput() {

@@ -1,4 +1,4 @@
-package com.megaport.NameSorter.iowrapper;
+package NameSorter.iowrapper;
 
 import java.io.File; 
 import java.io.FileWriter; 
@@ -18,11 +18,11 @@ public class FileHandler {
     private String appendString; // the string we append to the filename to create the output filename
     private String outputPathPrefix; // the path we prepend to the filename to create the output filename.
     private String finalOutputPath; // the combined output filename
-    private List<String> names; // list of names read from file
+    private List<String> names; // list of names read from a file
     
     // allows us to fail silently unless asked
-    public FileNotFoundException FNFError;
-    public IOException IOError; 
+    public FileNotFoundException FNFException;
+    public IOException IOException; 
 
     
     public FileHandler() {
@@ -61,7 +61,7 @@ public class FileHandler {
             }
             scanner.close();
         } catch (FileNotFoundException e) {
-            this.FNFError = e;   
+            this.FNFException = e;   
         }
     }
 
@@ -83,10 +83,10 @@ public class FileHandler {
                 }
                 fileWriter.close();
             } else {
-                this.IOError = new IOException("Cannot write to file: Already exists!");
+                this.IOException = new IOException("Cannot write to file: \"" + finalOutputPath + "\" already exists!");
             }
         } catch (IOException e){
-            this.IOError = e;
+            this.IOException = e;
         }
     }
 
