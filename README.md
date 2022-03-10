@@ -1,8 +1,10 @@
-# namesorter
+# NameSorter
 java name sorter
 
 # Use
-Clone the repository and run java -jar NameSorter.jar
+Clone the repository and run <code>java -jar NameSorter.jar</code> from a terminal.
+
+To build, run mvn package which will create a NameSorter-1.0-SNAPSHOT.jar in the new target directory. Run that with <code>java -jar target/NameSorter-1.0-SNAPSHOT.jar</code>
 
 A prompt should appear in your console, or a console should be provided if the .jar was run through another method.
 
